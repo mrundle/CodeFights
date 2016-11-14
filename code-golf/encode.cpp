@@ -23,16 +23,16 @@
  *         1 ≤ s.length ≤ 104.
  * [output] string
  * -----------------------------------------------------------------------------
- * Score: 132 chars
+ * Score: 130 chars
  */
 
+int i, n, z;
 auto encode(auto s) {
     char b[10000], c = s[0];
     /* i = input buffer index 
      * n = number of times seen - 1
      * z = output buffer index
      */
-    int i, n, z = 0;
     while (i++ < s.length())
         (c ^ s[i]) ?
             z += sprintf(b + z, "%c%d", c, n+1),
