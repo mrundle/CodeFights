@@ -1,7 +1,8 @@
 SRC=$(wildcard *.cpp)
+CFLAGS=-std=c++14 -fpermissive -w
 
 all: $(SRC)
-	g++ -std=gnu++14 -fpermissive -w $^ -c
+	g++ -c $(CFLAGS) $^
 
 clean:
 	rm *.o
